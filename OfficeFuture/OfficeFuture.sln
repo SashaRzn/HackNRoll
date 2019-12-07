@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeFuture.ManualDevice",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelemetryFunc", "TelemetryFunc\TelemetryFunc.csproj", "{A9E60E07-3567-458E-981C-3D8C6A3D434C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{544BAF1E-88DF-4E44-9DF7-9E79FA85161C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A9E60E07-3567-458E-981C-3D8C6A3D434C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9E60E07-3567-458E-981C-3D8C6A3D434C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9E60E07-3567-458E-981C-3D8C6A3D434C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{544BAF1E-88DF-4E44-9DF7-9E79FA85161C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{544BAF1E-88DF-4E44-9DF7-9E79FA85161C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{544BAF1E-88DF-4E44-9DF7-9E79FA85161C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{544BAF1E-88DF-4E44-9DF7-9E79FA85161C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
