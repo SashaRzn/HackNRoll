@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebSite.Models;
 
 namespace WebSite
 {
@@ -30,6 +31,9 @@ namespace WebSite
 				options.MinimumSameSitePolicy = SameSiteMode.None;
 			});
 
+			var hubConnectionString = "Endpoint=https://officefuture-signalr.service.signalr.net;AccessKey=EZ7YevtC4Pg/PFuZQrF3jgvNSaDmkwxNk76Pg5mN7Ic=;Version=1.0;";
+			services.AddMvc();
+			services.AddSignalR().AddAzureSignalR(hubConnectionString);
 
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 		}
@@ -45,6 +49,11 @@ namespace WebSite
 			{
 				app.UseExceptionHandler("/Home/Error");
 			}
+
+			app.UseAzureSignalR(routes =>
+			{
+				routes.MapHub<OfficeHub>("/officehub");
+			});
 
 			app.UseStaticFiles();
 			app.UseCookiePolicy();
